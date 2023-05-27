@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dn-telegram"
+version = "0.1.0"
+description = ""
+authors = ["Nikita Churikov <nikita@chur.ru>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+rss-parser = "^0.2.4"
+easygoogletranslate = "^0.0.4"
+loguru = "^0.7.0"
+pymongo = "^4.3.3"
+origamibot = "^2.3.4"
+pydantic = {extras = ["dotenv"], version = "^1.10.8"}
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.13.2"
+mongomock = "^4.1.2"
+pytest = "^7.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
