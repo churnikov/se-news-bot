@@ -18,6 +18,6 @@ if __name__ == "__main__":
         description = f"{translate(description_original)}\n\n\n"
         link_to_translation = f"htts://translate.google.com/translate?js=n&sl=auto&tl=en&u={news_item['link']}"
 
-        message = title_en + description + title_original + description_original + f"{news_item['publish_date']}\n" + news_item["link"]
+        message = title_en + description + title_original + description_original + f"{news_item['publish_date']}\n" + f"{news_item['link']}\n" + link_to_translation
         bot.send_message(CHAT_ID, message, parse_mode="Markdown")
         set_published([news_item])
